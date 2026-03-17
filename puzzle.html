@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Catch Bunny</title>
+
+<style>
+body{
+margin:0;
+overflow:hidden;
+background: linear-gradient(to right,#ffe6f0,#fff5fa);
+font-family: Comic Sans MS;
+text-align:center;
+}
+
+.heart{
+position:absolute;
+top:-50px;
+color:#ff4da6;
+animation: fall linear infinite;
+}
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+h2{
+margin-top:40px;
+color:#ff4da6;
+}
+
+#bunny{
+position:absolute;
+font-size:70px;
+cursor:pointer;
+}
+
+#msg{
+position:absolute;
+top:40%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 30px hotpink;
+display:none;
+animation: glow 1s infinite alternate;
+width:70%;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 10px pink;}
+to{box-shadow:0 0 40px deeppink;}
+}
+
+#nextBtn{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:pink;
+color:white;
+cursor:pointer;
+display:none;
+}
+
+</style>
+
+<script>
+
+function createHearts(){
+for(let i=0;i<25;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💗";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*5)+"s";
+document.body.appendChild(h);
+}
+}
+
+function moveBunny(){
+let b=document.getElementById("bunny");
+let x=Math.random()*90;
+let y=Math.random()*80;
+b.style.left=x+"vw";
+b.style.top=y+"vh";
+}
+
+function catchBunny(){
+document.getElementById("msg").style.display="block";
+document.getElementById("nextBtn").style.display="inline-block";
+clearInterval(run);
+}
+
+let run;
+
+window.onload=function(){
+createHearts();
+run=setInterval(moveBunny,900);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>🐰 Catch Me If You Can 😌💗</h2>
+
+<div id="bunny" onclick="catchBunny()">🐰</div>
+
+<div id="msg">
+😭💞 Finally pakar liya mujhe…  
+ab dekhain please maan jayein chandaaa🙏😭...narazgi achi baat nahi or eid pr toh bilkul nahi  
+game khel k maza aya naw?😁💐  
+
+<br><br>
+<button id="nextBtn" onclick="location.href='agree.html'">Next 💗</button>
+</div>
+
+</body>
+</html>

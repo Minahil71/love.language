@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bean Home</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+background: linear-gradient(to right,#ffe6f0,#fff5fa);
+font-family: Comic Sans MS;
+text-align:center;
+padding-top:60px;
+}
+
+/* FALL HEARTS */
+.heart{
+position:absolute;
+top:-50px;
+color:#ff4da6;
+animation: fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+/* GLOW BOX */
+.glowbox{
+margin:auto;
+width:70%;
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 30px hotpink;
+animation: glow 2s infinite alternate, float 3s infinite;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 20px pink;}
+to{box-shadow:0 0 50px deeppink;}
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+h1{color:#ff4da6}
+
+/* BUNNY */
+.bunny{
+position:absolute;
+bottom:10px;
+left:20px;
+font-size:70px;
+animation: hop 2s infinite;
+}
+
+@keyframes hop{
+0%{transform:translateY(0)}
+50%{transform:translateY(-25px)}
+100%{transform:translateY(0)}
+}
+
+</style>
+
+<script>
+function createHearts(){
+for(let i=0;i<25;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💗";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*5)+"s";
+document.body.appendChild(h);
+}
+}
+window.onload=createHearts;
+</script>
+
+</head>
+
+<body>
+
+<h1>🐰 Welcome Bean 🐰</h1>
+
+<div class="glowbox">
+<p>
+ab eid tk naraz toh nahi rehna naw.......maan jao..  
+Itni space achi nahi 🥺..  
+agr dil mai duriya ajaye toh na apko sukoon mily ga na mughy chain ayega 💗....  
+i am begging naw jannahhhh maana jayein please😭😭😭...  
+esy phr mai apse eidi b nahi mang sku gi agr ap naraz rhy🥺🥺...  
+ik minute  
+Kahi yeh apki sazish toh nahi k eidi na deni pry😀😀😀😀😀😀😀  
+Esa kuch nahi acha naraz ho toh ho eidi time pr milni chahye mughy huh🤧😤🙄...  
+Just kiddiin yr mannn jaooo...  
+Yeh website pta kitni aukhi banti 🙂..  
+exam ni tyr kiya isko banany k chakr mai...  
+Or chakar sy yaad aya 😭😭😭...  
+kal mai apki tension sy bilkul paralyze ho gai thi🥺🥺🥺🥺...  
+man jo yr 😭😭...  
+duniya sy chali gai toh kise baatain kro gy jee daso😔😔😔  
+Sorry nawww BEANNN😭😭😭😭😭💗💗💗💗  
+love yaaaa😭😭😭💕💕💕✨✨✨
+</p>
+</div>
+
+<br><br>
+<a href="sorry.html">🐰 One More Click 🐰</a>
+
+<div class="bunny">🐰</div>
+
+</body>
+</html>

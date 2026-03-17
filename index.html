@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secret Login</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+background: linear-gradient(to right,#ffd6e7,#ffeef5);
+font-family: Comic Sans MS;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* LOGIN BOX */
+.box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 25px hotpink;
+text-align:center;
+z-index:2;
+animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+input{
+padding:10px;
+margin:10px;
+border-radius:10px;
+border:1px solid pink;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:15px;
+background:pink;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* FALLING HEARTS */
+.heart{
+position:absolute;
+top:-50px;
+color:#ff4da6;
+animation: fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+/* BUNNY */
+.bunny{
+position:absolute;
+bottom:10px;
+right:20px;
+font-size:60px;
+animation: hop 2s infinite;
+}
+
+@keyframes hop{
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+}
+
+</style>
+
+<script>
+
+function createHearts(){
+for(let i=0;i<20;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💗";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(h);
+}
+}
+
+window.onload=createHearts;
+
+function login(){
+let u=document.getElementById("user").value;
+let p=document.getElementById("pass").value;
+
+if(u=="Fawad_Shakeel" && p=="LOVE_BEAN"){
+window.location="home.html";
+}
+else{
+alert("Its not for uh better not to try again alright🙂.....stay away from my bean's personal belongings.....");
+}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="box">
+<h2>🐰 MY SAFE PLACE 🐰</h2>
+
+<input type="text" id="user" placeholder="Username"><br>
+<input type="password" id="pass" placeholder="Password"><br>
+
+<button onclick="login()">Enter 💗</button>
+</div>
+
+<div class="bunny">🐰</div>
+
+</body>
+</html>

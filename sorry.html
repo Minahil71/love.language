@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorry Bean</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+background: linear-gradient(to right,#ffe6f0,#fff5fa);
+font-family: Comic Sans MS;
+text-align:center;
+padding-top:90px;
+}
+
+/* HEARTS */
+.heart{
+position:absolute;
+top:-50px;
+color:#ff4da6;
+animation: fall linear infinite;
+}
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+.card{
+display:inline-block;
+padding:40px;
+background:white;
+border-radius:30px;
+box-shadow:0 0 30px hotpink;
+animation: float 3s infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
+}
+
+.bunny{
+position:absolute;
+bottom:10px;
+right:30px;
+font-size:70px;
+animation: hop 2s infinite;
+}
+
+@keyframes hop{
+0%{transform:translateY(0)}
+50%{transform:translateY(-25px)}
+100%{transform:translateY(0)}
+}
+
+a{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:pink;
+color:white;
+border-radius:20px;
+text-decoration:none;
+box-shadow:0 0 15px hotpink;
+}
+
+</style>
+
+<script>
+function createHearts(){
+for(let i=0;i<25;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💗";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*5)+"s";
+document.body.appendChild(h);
+}
+}
+window.onload=createHearts;
+</script>
+
+</head>
+
+<body>
+
+<div class="card">
+<h2>🐻 Mr Bean Smile Please 🐻</h2>
+<p>
+    ab gallti ho gai iski saza itni lambi toh na dain apne kaha akely rehna mainy br br poucha but you cold hearded person😔😔..kaha chali jao😭😭😭
+    see ab itni effort b toh kri naw ..sorry bolri ..dubra kbhi apko hurt nahi hony dungi 🥺🌺
+    I AM SORRY JANAHHH🥺🎀.
+Naraz rehna mana hai 😤 
+Gussa sirf mai kr skti🙂
+Coz i am cute little babeee🎀
+Your duties are🌻 
+Smile compulsory 😌  
+Eidi compulsory 😎  
+Love unlimited 💗  
+</p>
+
+<a href="puzzle.html">🐰 Play Cute Game 🐰</a>
+
+</div>
+
+<div class="bunny">🐰</div>
+
+</body>
+</html>

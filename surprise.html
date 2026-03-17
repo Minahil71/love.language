@@ -1,0 +1,136 @@
+<!DOCTYPE html>  
+<html>
+<head>
+<title>Sweet Surprise</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+background: linear-gradient(to right,#ffe6f0,#fff5fa);
+font-family: Comic Sans MS; 
+}
+
+.heart{
+position:absolute;
+top:-50px;
+color:#ff4da6;
+animation: fall linear infinite;
+}
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+.container{
+display:flex;
+justify-content:space-around;
+align-items:center;
+height:100vh;
+padding:40px;
+}
+
+/* BIGGER IMAGE BOX — length and width further increased */
+.pic{
+width:500px;   /* previous 420px */
+height:500px;  /* previous 420px */
+border-radius:25px;
+box-shadow:0 0 30px hotpink;
+overflow:hidden;
+animation: float 3s infinite;
+}
+
+.pic img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* SMALLER MESSAGE BOX */
+.msgbox{
+background:white;
+padding:30px;
+width:32%;
+border-radius:30px;
+box-shadow:0 0 40px deeppink;
+animation: glow 1s infinite alternate;
+font-size:19px;
+color:#ff1493;
+line-height:1.6;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 20px pink;}
+to{box-shadow:0 0 60px hotpink;}
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
+}
+
+.bunny{
+position:absolute;
+bottom:10px;
+left:20px;
+font-size:70px;
+animation: hop 2s infinite;
+}
+
+@keyframes hop{
+0%{transform:translateY(0)}
+50%{transform:translateY(-25px)}
+100%{transform:translateY(0)}
+}
+
+</style>
+
+<script>
+function createHearts(){
+for(let i=0;i<25;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💗";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(4+Math.random()*5)+"s";
+document.body.appendChild(h);
+}
+}
+window.onload=createHearts;
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="pic">
+<img src="me.jpeg">
+</div>
+
+<div class="msgbox">
+ab maan gaye hain toh yeh lain meri ik piyari si picture 🎀✨  
+finally apko exclusive access mil hi gaya 😌🌸  
+khush ho jain ab warna main complaint kr dungi k appreciation hi nahi mil rahi 😤💗  
+
+meri pictures b ksi ksi ko milti hain ji 😁🌺  
+VIP category mai aa chuke hain ap mubarak ho 🎊  
+
+tareef krny ki zarurt nahi…  
+lekin agar zyada piyari lag rahi hun toh please control mat krna  
+dil khol k kr skty hain 😌✨  
+
+aur han zyada ghurna mana hai nazar lag jati …  
+bs screenshot mat save krna warna main emotional ho jaun gi 🤧🎀  
+
+I WONT MIND 😌💋💋  
+</div>
+
+</div>
+
+<div class="bunny">🐰</div>
+
+</body>
+</html>
